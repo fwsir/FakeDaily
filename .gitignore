@@ -1,0 +1,7 @@
+
+*.xcuserstate
+*.xcworkspacedata
+*.xcscheme
+*.lock
+Pods/*
+FakeDaily.xcodeproj/xcuserdata/BOOM.xcuserdatad/xcschemes/xcschememanagement.plist

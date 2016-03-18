@@ -1,0 +1,14 @@
+//
+//  PrefixHeader.pch
+//  FakeDaily
+//
+//  Created by BOOM on 16/3/18.
+//  Copyright © 2016年 DEVIL. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import "GlobalDefinition.h"
+
+#endif /* PrefixHeader_pch */
