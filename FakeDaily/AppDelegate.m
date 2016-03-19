@@ -19,7 +19,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    self.window = [[UIWindow alloc] initWithFrame:kScreenBounds];
+    self.window = [[UIWindow alloc] initWithFrame:ScreenBounds];
     LaucherViewController *vc = [[LaucherViewController alloc] initWithNibName:@"LaucherViewController" bundle:nil];
     self.window.rootViewController = vc;
     

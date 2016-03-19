@@ -14,6 +14,10 @@
 		FE3991F91C9B8ED100714375 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE3991EA1C9B8ED100714375 /* Assets.xcassets */; };
 		FE3991FA1C9B8ED100714375 /* LaucherViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3991F21C9B8ED100714375 /* LaucherViewController.m */; };
 		FE3991FB1C9B8ED100714375 /* LaucherViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE3991F31C9B8ED100714375 /* LaucherViewController.xib */; };
+		FE39920A1C9BD3F200714375 /* CoreManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3992091C9BD3F200714375 /* CoreManager.m */; };
+		FE39920D1C9BD40100714375 /* HttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE39920C1C9BD40100714375 /* HttpManager.m */; };
+		FE3992101C9BE62900714375 /* UIImageView+Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = FE39920F1C9BE62900714375 /* UIImageView+Ex.m */; };
+		FE3992131C9BEC2600714375 /* CoreManager+MainInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3992121C9BEC2600714375 /* CoreManager+MainInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,14 @@
 		FE3991F31C9B8ED100714375 /* LaucherViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaucherViewController.xib; sourceTree = "<group>"; };
 		FE3991FE1C9B902500714375 /* GlobalDefinition.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalDefinition.h; sourceTree = "<group>"; };
 		FE3991FF1C9B90C100714375 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		FE3992081C9BD3F200714375 /* CoreManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreManager.h; sourceTree = "<group>"; };
+		FE3992091C9BD3F200714375 /* CoreManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreManager.m; sourceTree = "<group>"; };
+		FE39920B1C9BD40100714375 /* HttpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpManager.h; sourceTree = "<group>"; };
+		FE39920C1C9BD40100714375 /* HttpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpManager.m; sourceTree = "<group>"; };
+		FE39920E1C9BE62900714375 /* UIImageView+Ex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Ex.h"; sourceTree = "<group>"; };
+		FE39920F1C9BE62900714375 /* UIImageView+Ex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Ex.m"; sourceTree = "<group>"; };
+		FE3992111C9BEC2600714375 /* CoreManager+MainInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreManager+MainInfo.h"; sourceTree = "<group>"; };
+		FE3992121C9BEC2600714375 /* CoreManager+MainInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CoreManager+MainInfo.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -193,6 +205,12 @@
 		FE3991F61C9B8ED100714375 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FE3992081C9BD3F200714375 /* CoreManager.h */,
+				FE3992091C9BD3F200714375 /* CoreManager.m */,
+				FE39920B1C9BD40100714375 /* HttpManager.h */,
+				FE39920C1C9BD40100714375 /* HttpManager.m */,
+				FE3992111C9BEC2600714375 /* CoreManager+MainInfo.h */,
+				FE3992121C9BEC2600714375 /* CoreManager+MainInfo.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -207,6 +225,8 @@
 		FE3991FC1C9B8F1600714375 /* Utility */ = {
 			isa = PBXGroup;
 			children = (
+				FE39920E1C9BE62900714375 /* UIImageView+Ex.h */,
+				FE39920F1C9BE62900714375 /* UIImageView+Ex.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -340,6 +360,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE39920D1C9BD40100714375 /* HttpManager.m in Sources */,
+				FE3992101C9BE62900714375 /* UIImageView+Ex.m in Sources */,
+				FE39920A1C9BD3F200714375 /* CoreManager.m in Sources */,
+				FE3992131C9BEC2600714375 /* CoreManager+MainInfo.m in Sources */,
 				FE3991C81C9B8C3000714375 /* AppDelegate.m in Sources */,
 				FE3991C51C9B8C3000714375 /* main.m in Sources */,
 				FE3991FA1C9B8ED100714375 /* LaucherViewController.m in Sources */,
