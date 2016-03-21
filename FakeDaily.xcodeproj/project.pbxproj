@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		373A587AF700AC306F7B189F /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 05E86F48DA7EA61D10485705 /* libPods.a */; };
+		FE07297C1C9D5A5400744762 /* UIView+Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = FE07297B1C9D5A5400744762 /* UIView+Ex.m */; };
+		FE0729801C9F832100744762 /* LeftViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE07297E1C9F832100744762 /* LeftViewController.m */; };
+		FE0729811C9F832100744762 /* LeftViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE07297F1C9F832100744762 /* LeftViewController.xib */; };
+		FE0729861C9FDA5D00744762 /* LeftTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE0729841C9FDA5D00744762 /* LeftTableViewCell.m */; };
+		FE0729871C9FDA5D00744762 /* LeftTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE0729851C9FDA5D00744762 /* LeftTableViewCell.xib */; };
+		FE07298B1C9FE18E00744762 /* LeftDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FE07298A1C9FE18E00744762 /* LeftDataModel.m */; };
 		FE3991C51C9B8C3000714375 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3991C41C9B8C3000714375 /* main.m */; };
 		FE3991C81C9B8C3000714375 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3991C71C9B8C3000714375 /* AppDelegate.m */; };
 		FE3991D31C9B8C3000714375 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE3991D11C9B8C3000714375 /* LaunchScreen.storyboard */; };
@@ -18,12 +24,24 @@
 		FE39920D1C9BD40100714375 /* HttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FE39920C1C9BD40100714375 /* HttpManager.m */; };
 		FE3992101C9BE62900714375 /* UIImageView+Ex.m in Sources */ = {isa = PBXBuildFile; fileRef = FE39920F1C9BE62900714375 /* UIImageView+Ex.m */; };
 		FE3992131C9BEC2600714375 /* CoreManager+MainInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3992121C9BEC2600714375 /* CoreManager+MainInfo.m */; };
+		FE3992171C9D232C00714375 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE3992151C9D232C00714375 /* MainViewController.m */; };
+		FE3992181C9D232C00714375 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE3992161C9D232C00714375 /* MainViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		05E86F48DA7EA61D10485705 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B2EB0DA6D6F09A2746709A0 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C62AA3B9679AE7BCC401896E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		FE07297A1C9D5A5400744762 /* UIView+Ex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Ex.h"; sourceTree = "<group>"; };
+		FE07297B1C9D5A5400744762 /* UIView+Ex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Ex.m"; sourceTree = "<group>"; };
+		FE07297D1C9F832100744762 /* LeftViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftViewController.h; sourceTree = "<group>"; };
+		FE07297E1C9F832100744762 /* LeftViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftViewController.m; sourceTree = "<group>"; };
+		FE07297F1C9F832100744762 /* LeftViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftViewController.xib; sourceTree = "<group>"; };
+		FE0729831C9FDA5D00744762 /* LeftTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftTableViewCell.h; sourceTree = "<group>"; };
+		FE0729841C9FDA5D00744762 /* LeftTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftTableViewCell.m; sourceTree = "<group>"; };
+		FE0729851C9FDA5D00744762 /* LeftTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeftTableViewCell.xib; sourceTree = "<group>"; };
+		FE0729891C9FE18E00744762 /* LeftDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftDataModel.h; sourceTree = "<group>"; };
+		FE07298A1C9FE18E00744762 /* LeftDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftDataModel.m; sourceTree = "<group>"; };
 		FE3991C01C9B8C3000714375 /* FakeDaily.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FakeDaily.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE3991C41C9B8C3000714375 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		FE3991C61C9B8C3000714375 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = ../AppDelegate.h; sourceTree = "<group>"; };
@@ -44,6 +62,9 @@
 		FE39920F1C9BE62900714375 /* UIImageView+Ex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Ex.m"; sourceTree = "<group>"; };
 		FE3992111C9BEC2600714375 /* CoreManager+MainInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CoreManager+MainInfo.h"; sourceTree = "<group>"; };
 		FE3992121C9BEC2600714375 /* CoreManager+MainInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CoreManager+MainInfo.m"; sourceTree = "<group>"; };
+		FE3992141C9D232C00714375 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		FE3992151C9D232C00714375 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		FE3992161C9D232C00714375 /* MainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +94,25 @@
 				9B2EB0DA6D6F09A2746709A0 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		FE0729821C9FDA2F00744762 /* LeftDrawer */ = {
+			isa = PBXGroup;
+			children = (
+				FE0729831C9FDA5D00744762 /* LeftTableViewCell.h */,
+				FE0729841C9FDA5D00744762 /* LeftTableViewCell.m */,
+				FE0729851C9FDA5D00744762 /* LeftTableViewCell.xib */,
+			);
+			path = LeftDrawer;
+			sourceTree = "<group>";
+		};
+		FE0729881C9FE05800744762 /* LeftDrawer */ = {
+			isa = PBXGroup;
+			children = (
+				FE0729891C9FE18E00744762 /* LeftDataModel.h */,
+				FE07298A1C9FE18E00744762 /* LeftDataModel.m */,
+			);
+			path = LeftDrawer;
 			sourceTree = "<group>";
 		};
 		FE3991B71C9B8C3000714375 = {
@@ -160,6 +200,9 @@
 		FE3991ED1C9B8ED100714375 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				FE3992141C9D232C00714375 /* MainViewController.h */,
+				FE3992151C9D232C00714375 /* MainViewController.m */,
+				FE3992161C9D232C00714375 /* MainViewController.xib */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -191,6 +234,9 @@
 		FE3991F41C9B8ED100714375 /* LeftDrawer */ = {
 			isa = PBXGroup;
 			children = (
+				FE07297D1C9F832100744762 /* LeftViewController.h */,
+				FE07297E1C9F832100744762 /* LeftViewController.m */,
+				FE07297F1C9F832100744762 /* LeftViewController.xib */,
 			);
 			path = LeftDrawer;
 			sourceTree = "<group>";
@@ -205,6 +251,7 @@
 		FE3991F61C9B8ED100714375 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				FE0729881C9FE05800744762 /* LeftDrawer */,
 				FE3992081C9BD3F200714375 /* CoreManager.h */,
 				FE3992091C9BD3F200714375 /* CoreManager.m */,
 				FE39920B1C9BD40100714375 /* HttpManager.h */,
@@ -218,6 +265,7 @@
 		FE3991F81C9B8ED100714375 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				FE0729821C9FDA2F00744762 /* LeftDrawer */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -227,6 +275,8 @@
 			children = (
 				FE39920E1C9BE62900714375 /* UIImageView+Ex.h */,
 				FE39920F1C9BE62900714375 /* UIImageView+Ex.m */,
+				FE07297A1C9D5A5400744762 /* UIView+Ex.h */,
+				FE07297B1C9D5A5400744762 /* UIView+Ex.m */,
 			);
 			path = Utility;
 			sourceTree = "<group>";
@@ -299,9 +349,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE0729871C9FDA5D00744762 /* LeftTableViewCell.xib in Resources */,
 				FE3991FB1C9B8ED100714375 /* LaucherViewController.xib in Resources */,
 				FE3991F91C9B8ED100714375 /* Assets.xcassets in Resources */,
+				FE0729811C9F832100744762 /* LeftViewController.xib in Resources */,
 				FE3991D31C9B8C3000714375 /* LaunchScreen.storyboard in Resources */,
+				FE3992181C9D232C00714375 /* MainViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,11 +414,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE39920D1C9BD40100714375 /* HttpManager.m in Sources */,
+				FE0729801C9F832100744762 /* LeftViewController.m in Sources */,
 				FE3992101C9BE62900714375 /* UIImageView+Ex.m in Sources */,
 				FE39920A1C9BD3F200714375 /* CoreManager.m in Sources */,
+				FE3992171C9D232C00714375 /* MainViewController.m in Sources */,
 				FE3992131C9BEC2600714375 /* CoreManager+MainInfo.m in Sources */,
+				FE0729861C9FDA5D00744762 /* LeftTableViewCell.m in Sources */,
 				FE3991C81C9B8C3000714375 /* AppDelegate.m in Sources */,
+				FE07298B1C9FE18E00744762 /* LeftDataModel.m in Sources */,
 				FE3991C51C9B8C3000714375 /* main.m in Sources */,
+				FE07297C1C9D5A5400744762 /* UIView+Ex.m in Sources */,
 				FE3991FA1C9B8ED100714375 /* LaucherViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

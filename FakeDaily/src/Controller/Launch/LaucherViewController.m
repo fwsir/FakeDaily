@@ -28,26 +28,29 @@
 
 - (void)showLaunchAnimation
 {
-    WS(weakSelf)
     [CoreManager getLaunchImageWithSize:@"720*1184" success:^(id json) {
         
-        [weakSelf.secondLaunchView setImageWithUrlString:json[@"img"] placeHolder:nil];
+        [self.secondLaunchView setImageWithUrlString:json[@"img"] placeHolder:nil];
         [UIView animateWithDuration:2 animations:^{
-            weakSelf.firstLaunchView.alpha = 0;
-            weakSelf.secondLaunchView.transform = CGAffineTransformMakeScale(1.1, 1.1);
+            self.firstLaunchView.alpha = 0;
+            self.secondLaunchView.transform = CGAffineTransformMakeScale(1.1, 1.1);
         } completion:^(BOOL finished) {
-            [weakSelf.firstLaunchView removeFromSuperview];
+            [self.firstLaunchView removeFromSuperview];
             
             [UIView animateWithDuration:0.4 animations:^{
-                weakSelf.secondLaunchView.alpha = 0;
+                self.secondLaunchView.alpha = 0;
             } completion:^(BOOL finished) {
-                [weakSelf.secondLaunchView removeFromSuperview];
+                
+                [self.secondLaunchView removeFromSuperview];
+                [self.view removeFromSuperview];
             }];
         }];
         
     } failure:^(NSError *error) {
-        [weakSelf.firstLaunchView removeFromSuperview];
-        [weakSelf.secondLaunchView removeFromSuperview];
+        [self.firstLaunchView removeFromSuperview];
+        [self.secondLaunchView removeFromSuperview];
+        
+        [self.view removeFromSuperview];
     }];
 }
 

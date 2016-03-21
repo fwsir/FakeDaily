@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MainViewController">
+            <connections>
+                <outlet property="leftView" destination="mPV-Fp-0CS" id="sgA-9e-Zmi"/>
+                <outlet property="leftViewRightConstraint" destination="zXI-Jj-nE6" id="GpR-M0-LWn"/>
+                <outlet property="leftViewWidthConstraint" destination="PJE-El-X9f" id="Q8C-hS-aLg"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mPV-Fp-0CS" userLabel="LeftView">
+                    <rect key="frame" x="-240" y="0.0" width="240" height="600"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="240" id="PJE-El-X9f"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7FG-FY-9pu" userLabel="MainView">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zmt-f4-4hh">
+                            <rect key="frame" x="22" y="261" width="38" height="30"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="Open">
+                                <color key="titleColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="openLeft:" destination="-1" eventType="touchUpInside" id="Wg3-Oq-nih"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.62407115810000002" green="0.78913867469999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <gestureRecognizers/>
+            <constraints>
+                <constraint firstItem="7FG-FY-9pu" firstAttribute="bottom" secondItem="mPV-Fp-0CS" secondAttribute="bottom" id="3Ox-gM-XR4"/>
+                <constraint firstItem="mPV-Fp-0CS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="9bZ-LY-FOG"/>
+                <constraint firstItem="7FG-FY-9pu" firstAttribute="top" secondItem="mPV-Fp-0CS" secondAttribute="top" id="C21-fQ-Jgk"/>
+                <constraint firstAttribute="bottom" secondItem="mPV-Fp-0CS" secondAttribute="bottom" id="Q0g-Xd-eOe"/>
+                <constraint firstItem="7FG-FY-9pu" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="ZOG-9p-JnI"/>
+                <constraint firstItem="7FG-FY-9pu" firstAttribute="leading" secondItem="mPV-Fp-0CS" secondAttribute="trailing" id="eCx-6f-5qO"/>
+                <constraint firstItem="mPV-Fp-0CS" firstAttribute="trailing" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="zXI-Jj-nE6"/>
+            </constraints>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="MMk-oc-e0s" appends="YES" id="mtB-lB-hhf"/>
+            </connections>
+            <point key="canvasLocation" x="614" y="375"/>
+        </view>
+        <panGestureRecognizer minimumNumberOfTouches="1" id="MMk-oc-e0s">
+            <connections>
+                <action selector="panAction:" destination="-1" id="8Y6-4v-9be"/>
+                <outlet property="delegate" destination="-1" id="Fpz-xF-Bsr"/>
+            </connections>
+        </panGestureRecognizer>
+    </objects>
+</document>

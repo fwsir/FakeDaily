@@ -15,6 +15,8 @@
 #define ScreenWidth  [UIScreen mainScreen].bounds.size.width
 #define ScreenBounds [UIScreen mainScreen].bounds
 
+#define LeftViewWidth  0.6 * ScreenWidth
+
 #define KeyWindow [[UIApplication sharedApplication] keyWindow]
 #define TopView  [[UIApplication sharedApplication] keyWindow].rootViewController.view
 

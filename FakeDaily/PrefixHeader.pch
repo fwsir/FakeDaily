@@ -10,5 +10,6 @@
 #define PrefixHeader_pch
 
 #import "GlobalDefinition.h"
+#import <Masonry/Masonry.h>
 
 #endif /* PrefixHeader_pch */
