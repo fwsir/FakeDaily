@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="AutoLoopCollectionViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="271" height="245"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="271" height="245"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TKk-NF-Vds">
+                        <rect key="frame" x="0.0" y="0.0" width="271" height="245"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Epe-Qk-otZ">
+                        <rect key="frame" x="15" y="175" width="226" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="50" id="Rc6-ZZ-EWD"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="TKk-NF-Vds" secondAttribute="trailing" id="ERd-s2-Zfg"/>
+                <constraint firstAttribute="bottom" secondItem="Epe-Qk-otZ" secondAttribute="bottom" constant="20" id="HMa-0Z-rfE"/>
+                <constraint firstItem="TKk-NF-Vds" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="MwM-yJ-fKu"/>
+                <constraint firstAttribute="trailing" secondItem="Epe-Qk-otZ" secondAttribute="trailing" constant="30" id="PG8-yR-HRz"/>
+                <constraint firstAttribute="bottom" secondItem="TKk-NF-Vds" secondAttribute="bottom" id="PzF-Fs-BUT"/>
+                <constraint firstItem="TKk-NF-Vds" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="mKe-Vt-dSN"/>
+                <constraint firstItem="Epe-Qk-otZ" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="15" id="n2n-A8-LwT"/>
+            </constraints>
+            <size key="customSize" width="271" height="245"/>
+            <connections>
+                <outlet property="cellLabel" destination="Epe-Qk-otZ" id="5sb-4T-xWi"/>
+                <outlet property="imageView" destination="TKk-NF-Vds" id="UOX-Gc-N8l"/>
+            </connections>
+            <point key="canvasLocation" x="250.5" y="285.5"/>
+        </collectionViewCell>
+    </objects>
+</document>

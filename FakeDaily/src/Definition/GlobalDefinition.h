@@ -55,7 +55,7 @@ if (block) {\
 
 #define WS(weakSelf) __weak typeof(self) weakSelf = self;
 
-typedef void(^RequestSuccess)(id json);
+typedef void(^RequestSuccess)(id data);
 typedef void(^RequestFailure)(NSError *error);
 
 typedef NS_ENUM(NSUInteger, HttpMethod)

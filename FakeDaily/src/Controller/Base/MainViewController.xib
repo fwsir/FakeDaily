@@ -10,6 +10,7 @@
                 <outlet property="leftView" destination="mPV-Fp-0CS" id="sgA-9e-Zmi"/>
                 <outlet property="leftViewRightConstraint" destination="zXI-Jj-nE6" id="GpR-M0-LWn"/>
                 <outlet property="leftViewWidthConstraint" destination="PJE-El-X9f" id="Q8C-hS-aLg"/>
+                <outlet property="mainView" destination="7FG-FY-9pu" id="peu-WK-mqg"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -55,7 +56,7 @@
             <connections>
                 <outletCollection property="gestureRecognizers" destination="MMk-oc-e0s" appends="YES" id="mtB-lB-hhf"/>
             </connections>
-            <point key="canvasLocation" x="614" y="375"/>
+            <point key="canvasLocation" x="517" y="444"/>
         </view>
         <panGestureRecognizer minimumNumberOfTouches="1" id="MMk-oc-e0s">
             <connections>

@@ -8,15 +8,19 @@
 
 #import "MainViewController.h"
 #import "LeftViewController.h"
+#import "HomePageViewController.h"
 #import "UIView+Ex.h"
 
 @interface MainViewController () <UIGestureRecognizerDelegate>
 
 @property (weak, nonatomic) IBOutlet UIView *leftView;
+@property (weak, nonatomic) IBOutlet UIView *mainView;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftViewRightConstraint;
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *leftViewWidthConstraint;
 @property (assign, nonatomic) BOOL isFold;
 @property (assign, nonatomic) CGPoint orignPoint;
+
+@property (strong, nonatomic) HomePageViewController *homeVC;
 
 @end
 
@@ -32,6 +36,20 @@
     [self.leftVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(self.leftView);
     }];
+    
+    [self.mainView addSubview:self.homeVC.view];
+    [self.homeVC.view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.mainView);
+    }];
+}
+
+- (HomePageViewController *)homeVC
+{
+    if (!_homeVC)
+    {
+        _homeVC = [[HomePageViewController alloc] initWithNibName:@"BaseViewController" bundle:nil];
+    }
+    return _homeVC;
 }
 
 - (IBAction)openLeft:(UIButton *)sender

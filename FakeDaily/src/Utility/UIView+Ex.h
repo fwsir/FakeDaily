@@ -10,6 +10,9 @@
 
 @interface UIView (Ex)
 
-- (void)setCenterX:(CGFloat)x;
+@property (assign, nonatomic) CGFloat centerX;
+@property (assign, nonatomic) CGFloat centerY;
+@property (assign, nonatomic) CGFloat width;
+@property (assign, nonatomic) CGFloat height;
 
 @end
