@@ -28,9 +28,9 @@
 
 - (void)showLaunchAnimation
 {
-    [CoreManager getLaunchImageWithSize:@"720*1184" success:^(id json) {
+    [CoreManager getLaunchImageWithSize:@"720*1184" success:^(id data) {
         
-        [self.secondLaunchView setImageWithUrlString:json[@"img"] placeHolder:nil];
+        [self.secondLaunchView setImageWithUrlString:data[@"img"] placeHolder:nil];
         [UIView animateWithDuration:2 animations:^{
             self.firstLaunchView.alpha = 0;
             self.secondLaunchView.transform = CGAffineTransformMakeScale(1.1, 1.1);

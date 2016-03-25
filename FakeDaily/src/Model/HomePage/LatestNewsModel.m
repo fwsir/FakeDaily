@@ -16,7 +16,7 @@
     return @{
              @"date":@"date",
              @"stories":@"stories",
-             @"topStories":@"topStories"
+             @"topStories":@"top_stories"
              };
 }
 
@@ -24,7 +24,7 @@
 {
     return @{
              @"stories":[SingleNewsModel class],
-             @"TopStories":[SingleNewsModel class]
+             @"topStories":[SingleNewsModel class]
              };
 }
 

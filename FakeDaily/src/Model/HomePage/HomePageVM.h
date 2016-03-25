@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 typedef void(^requestFinish)();
-
+@class SingleNewsModel;
 @interface HomePageVM : NSObject
 
 @property (copy, nonatomic) NSString *currentDay;
@@ -29,5 +29,7 @@ typedef void(^requestFinish)();
 - (NSUInteger)numberOfRowsInSection:(NSUInteger)section;
 
 - (NSMutableArray *)autoloopData;
+
+- (SingleNewsModel *)singleModelForIndexPath:(NSIndexPath *)indexPath;
 
 @end

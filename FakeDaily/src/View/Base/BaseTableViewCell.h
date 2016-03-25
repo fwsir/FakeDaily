@@ -8,9 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+@class SingleNewsModel;
 @interface BaseTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UILabel *cellLabel;
 @property (weak, nonatomic) IBOutlet UIImageView *cellImage;
+@property (strong, nonatomic) SingleNewsModel *singleModel;
 
 @end

@@ -30,9 +30,17 @@
               success:(RequestSuccess)success
               failure:(RequestFailure)failure
 {
-    [HttpManager requestWithMethod:method baseUrl:IP_HEADER url:url params:params success:^(id json) {
+    [HttpManager requestWithMethod:method baseUrl:IP_HEADER url:url params:params success:^(id data) {
 
-        QuickBlock(success, json)
+        if (!cls)
+        {
+            QuickBlock(success, data)
+        }
+        else
+        {
+            QuickBlock(success, [cls mj_objectWithKeyValues:data]);
+        }
+        
     } failure:failure];
 }
 

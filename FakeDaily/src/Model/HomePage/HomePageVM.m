@@ -12,7 +12,7 @@
 
 @implementation HomePageVM
 {
-    NSMutableArray *_listLayouts;
+    NSMutableArray *_listNews;
     NSMutableArray *_autoLoopNews;
     NSMutableArray *_dateList;
 }
@@ -33,15 +33,18 @@
         NSMutableArray *listNews = [NSMutableArray array];
         [listNews addObjectsFromArray:model.stories];
         
-        [_listLayouts removeAllObjects];
-        _listLayouts = [NSMutableArray array];
+        [_listNews removeAllObjects];
+        _listNews = [NSMutableArray array];
         
+        NSMutableArray *tmpNews = [NSMutableArray array];
         for (SingleNewsModel *singleModel in listNews)
         {
             [_newsIDs addObject:singleModel.newsID];
             
+            [tmpNews addObject:singleModel];
             // SingleNewsLayout
         }
+        [_listNews addObject:tmpNews];
         
         [_autoLoopNews removeAllObjects];
         _autoLoopNews = [NSMutableArray array];
@@ -88,17 +91,22 @@
 
 - (NSUInteger)numberOfSections
 {
-    return _listLayouts.count;
+    return _listNews.count;
 }
 
 - (NSUInteger)numberOfRowsInSection:(NSUInteger)section
 {
-    if (_listLayouts.count > section)
+    if (_listNews.count > section)
     {
-        return [[_listLayouts objectAtIndex:section] count];
+        return [[_listNews objectAtIndex:section] count];
     }
     
     return 0;
+}
+
+- (SingleNewsModel *)singleModelForIndexPath:(NSIndexPath *)indexPath
+{
+    return _listNews[indexPath.section][indexPath.row];
 }
 
 - (NSString *)dateForSection:(NSInteger)section

@@ -13,12 +13,12 @@
 + (NSDictionary *)replacedKeyFromPropertyName
 {
     return @{
-             @"imagesUrl":@"imagesUrl",
-             @"imageUrl":@"imageUrl",
-             @"newsType":@"newsType",
-             @"newsID":@"newsID",
-             @"prefix":@"prefix",
-             @"newsTitle":@"newsTitle"
+             @"imagesUrl":@"images",
+             @"imageUrl":@"image",
+             @"newsType":@"type",
+             @"newsID":@"id",
+             @"prefix":@"ga_prefix",
+             @"newsTitle":@"title"
              };
 }
 

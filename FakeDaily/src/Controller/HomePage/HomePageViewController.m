@@ -11,12 +11,14 @@
 #import "BaseTableViewHeaderView.h"
 #import "BaseTableViewCell.h"
 #import "AutoLoopView.h"
-
+#import "HomePageVM.h"
 
 @interface HomePageViewController () <UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate, UITableViewDelegate, UITableViewDataSource>
 
 @property (strong, nonatomic) AutoLoopView *loopView;
 @property (strong, nonatomic) dispatch_source_t timer;
+
+@property (strong, nonatomic) HomePageVM *viewModel;
 
 @end
 
@@ -32,6 +34,12 @@ static NSString *BaseHeaderIdentifier = @"BaseTableViewHeader";
     
     [self.tableView registerNib:[UINib nibWithNibName:BaseCellIdentifier bundle:nil] forCellReuseIdentifier:BaseCellIdentifier];
     [self.tableView registerClass:[BaseTableViewHeaderView class] forHeaderFooterViewReuseIdentifier:BaseCellIdentifier];
+    
+    [self.viewModel requestLatestNews:^{
+        // [weakSelf addTopView];
+        // reloadData;
+        [self.tableView reloadData];
+    }];
     
     [self startTimer];
 }
@@ -51,6 +59,15 @@ static NSString *BaseHeaderIdentifier = @"BaseTableViewHeader";
     
     view.backgroundColor = [UIColor greenColor];
     self.tableView.tableHeaderView = view;
+}
+
+- (HomePageVM *)viewModel
+{
+    if (!_viewModel)
+    {
+        _viewModel = [[HomePageVM alloc] init];
+    }
+    return _viewModel;
 }
 
 - (void)startTimer
@@ -94,19 +111,18 @@ static NSString *BaseHeaderIdentifier = @"BaseTableViewHeader";
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return 10;
+    return [self.viewModel numberOfSections];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return [self.viewModel numberOfRowsInSection:section];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     BaseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:BaseCellIdentifier forIndexPath:indexPath];
-    
-    cell.cellLabel.text = [NSString stringWithFormat:@"This is Cell %d", (int)indexPath.item];
+    cell.singleModel = [self.viewModel singleModelForIndexPath:indexPath];
     
     return cell;
 }
